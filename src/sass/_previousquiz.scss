@@ -1,0 +1,22 @@
+@use "./commonstyles" as  c;
+
+
+
+.previous{
+
+
+    @include c.flexContent;
+    justify-content: space-between;
+
+    &__left{
+        @include c.flexContent;
+        justify-content: space-between;
+        text-transform: capitalize;
+        text-align: center;
+        width: 350px;
+        padding-inline: 10px;
+
+    }
+
+
+}

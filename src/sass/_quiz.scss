@@ -1,0 +1,51 @@
+@use "./commonstyles" as c;
+
+.quiz {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 10px;
+  margin-inline: 20px;
+  font-family: c.$secondary;
+  &--heading {
+    padding-left: 20px;
+    padding-top: 10px;
+    font-family: c.$content;
+
+  }
+
+  &__left {
+    flex: 1;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+
+    height: 95vh;
+    overflow-y: auto;
+    padding-left: 20px;
+    padding-top: 10px;
+
+    &_heading {
+      font-size: 2.2rem;
+      font-weight: 300;
+      letter-spacing: 4px;
+    }
+
+    &_inputname {
+      width: 50%;
+      border: none;
+      border-bottom: 0.5px solid gray;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+      margin: 20px;
+      padding-left: 10px;
+      padding-bottom: 10px;
+      outline: none;
+    }
+  }
+  &__right {
+    flex: 1;
+  }
+  &--btn {
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+}

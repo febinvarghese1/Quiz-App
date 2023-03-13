@@ -1,0 +1,24 @@
+{
+  "quizes": [
+    {
+      "id": 1,
+      "values": {
+        "id": 1,
+        "question": "This is an example question",
+        "type": "radio",
+        "choices": ["1", "2", "3", "4"],
+        "correctAnswer": "3"
+      }
+    },
+    {
+      "id": 2,
+      "values": {
+        "id": 2,
+        "question": "This is an example question",
+        "type": "checkbox",
+        "choices": ["1", "2", "3", "4"],
+        "correctAnswer": "3"
+      }
+    }
+  ]
+}

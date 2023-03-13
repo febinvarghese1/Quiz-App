@@ -1,0 +1,49 @@
+.singlequiz {
+  width: 100%;
+  margin-top: 20px;
+ 
+  & p {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+  }
+  &__question {
+    width: 50%;
+    border: none;
+    border-bottom: 0.5px solid gray;
+    font-size: 1.2rem;
+    margin: 20px;
+    padding-left: 10px;
+    outline: none;
+    padding-bottom: 10px;
+    &::placeholder {
+      text-transform: capitalize;
+    }
+  }
+  &__type {
+    & select {
+      width: 200px;
+      padding: 10px;
+      border: 0.2px solid gray;
+      margin-left: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      background-color: #30bf91;
+      color: white;
+
+      &:focus {
+        outline: 1px solid #30bf91;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &--btn{
+    margin-left: 20px;
+  }
+}

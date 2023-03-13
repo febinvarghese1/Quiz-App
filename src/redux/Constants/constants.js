@@ -1,0 +1,4 @@
+export const constants = {
+  FETCH_QUIZ_REQUEST: "FETCH_QUIZ_REQUEST",
+  FETCH_QUIZ_DATA: "FETCH_QUIZ_DATA",
+};

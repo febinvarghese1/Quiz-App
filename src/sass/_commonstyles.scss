@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;200;300;400;500;600;700&family=Merriweather+Sans:wght@300;400;500;600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+$primary: "poppins";
+$secondary: "Merriweather Sans";
+$content: "IBM Plex Serif";
+
+
+
+
+h1,h2,h3,h4{
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+@mixin flexContent($direction: row) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+
+
+.mainButton{
+    width: 200px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: $secondary;
+    letter-spacing: 3px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #30BF91;
+    color: white;
+}
