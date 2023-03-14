@@ -1,9 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AnswerComponent from "../../Components/AnswerComponent";
 import QuizComponent from "../../Components/QuizComponent";
-import ButtonComponent from "../../Components/ButtonComponent";
+import { addingNewQuiz } from "../../redux/Actions/actionCreators";
+import { useDispatch } from "react-redux";
 
 const CreateQuiz = () => {
+  const initialQuizState = {
+    id: null,
+    question: "",
+    type: "",
+    options: "",
+    correctAnswer: "",
+  };
+
+  const [quiz, setQuiz] = useState(initialQuizState);
+
+  const [quizQuestion, setQuizQuestion] = useState("");
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (quizQuestion) {
+      dispatchActionHandler();
+    }
+  }, [quiz]);
+
+  const dispatchActionHandler = () => {
+    dispatch(addingNewQuiz(quiz)).then((data) => console.log(data));
+  };
+
+  const createQuizHandler = () => {
+    setQuiz({ ...quiz, question: quizQuestion });
+  };
+
   return (
     <div>
       <h1 className="quiz--heading">Create a Quiz</h1>
@@ -17,10 +46,17 @@ const CreateQuiz = () => {
           />
           <h1 className="quiz__left_heading">Questions</h1>
 
-          <QuizComponent />
-          
+          <QuizComponent
+            setQuiz={setQuiz}
+            setQuizQuestion={setQuizQuestion}
+            quizQuestion={quizQuestion}
+            quiz={quiz}
+          />
+
           <div className="quiz--btn">
-            <ButtonComponent value="Add new question" />
+            <button onClick={createQuizHandler} className="mainButton">
+              Add new question
+            </button>
           </div>
         </div>
         <div className="quiz__right">

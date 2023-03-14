@@ -1,25 +1,22 @@
-import { constants } from "../Constants/Constants"
+import { constants } from "../Constants/constants"
 
 
 const initialState = {
-    loading: true,
-    data:[],
-    
+    data:[]
 }
 
 
-const reducer = (state=initialState,action) => {
+export const reducer = (state=initialState,action) => {
     switch(action.type){
-        case constants.FETCH_QUIZ_REQUEST:
-            return {
-                ...state,
-                loading: true
-            }
         case constants.FETCH_QUIZ_DATA:
             return {
-                loading: false,
                 data: action.payload
             }
+            case constants.ADD_A_QUIZ:
+                console.log(action.payload)
+                return{
+                    data: [...state.data,action.payload]
+                }
         default:
             return state
         }

@@ -1,6 +1,9 @@
 import React from 'react'
 
 const QuizTypeComponent = () => {
+
+  
+
   return (
     <div className='singlequiz__type'>
     <select name="Question Type">
