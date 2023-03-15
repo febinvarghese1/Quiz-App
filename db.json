@@ -1,25 +1,5 @@
 {
   "quizes": [
-    {
-      "id": 1,
-      "question": "sample",
-      "type": "",
-      "options": "",
-      "correctAnswer": ""
-    },
-    {
-      "id": 2,
-      "question": "new sample",
-      "type": "",
-      "options": "",
-      "correctAnswer": ""
-    },
-    {
-      "id": 3,
-      "question": "new samp2",
-      "type": "",
-      "options": "",
-      "correctAnswer": ""
-    }
+    
   ]
 }

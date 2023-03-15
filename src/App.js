@@ -8,8 +8,8 @@ import { useDispatch,useSelector } from "react-redux";
 import { fetchQuizes } from "./redux/Actions/actionCreators";
 function App() {
   const state = useSelector(state => state);
-  console.log(state.reducer.data);
   const dispatch = useDispatch();
+  console.log(state.getQuizReducer.data)
 
 
   useEffect(()=>{

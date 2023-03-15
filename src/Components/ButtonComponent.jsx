@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ButtonComponent = ({value}) => {
+const ButtonComponent = ({value,onClick}) => {
   return (
-    <button className='mainButton' >{value}</button>
+    <button className='mainButton' onClick={onClick} >{value}</button>
     )
 }
 

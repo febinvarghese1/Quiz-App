@@ -9,27 +9,21 @@
  
     &_input {
         margin-top: 20px;
-        & i{
-            padding: 15px;
-            margin-left: 10px;
-            color: #30BF91;
-            border: 0.5px solid #30BF91;
-            cursor: pointer;
-            transition:  all .5s ease;
-            &:hover{
-                background-color: #30BF91;
-                color: white;
-            }
-        }
+        margin-right: 30px;
+        
       & input {
-        width: 50%;
+        width: 100%;
         border: none;
         height: 50px;
         padding: 10px;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         text-transform: capitalize;
         outline: none;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+        &::placeholder{
+
+          text-transform: capitalize;
+        }
       }
     }
   }

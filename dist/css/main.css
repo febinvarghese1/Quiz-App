@@ -189,18 +189,6 @@ h1, h2, h3, h4 {
 .answer__container_input {
   margin-top: 20px;
 }
-.answer__container_input i {
-  padding: 15px;
-  margin-left: 10px;
-  color: #30BF91;
-  border: 0.5px solid #30BF91;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-.answer__container_input i:hover {
-  background-color: #30BF91;
-  color: white;
-}
 .answer__container_input input {
   width: 50%;
   border: none;
@@ -249,4 +237,48 @@ h1, h2, h3, h4 {
   padding-left: 20px;
   cursor: pointer;
   font-size: 1.1rem;
+}
+
+.displayquiz {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  flex-direction: column;
+  border: 0.5px solid black;
+  margin-right: 20px;
+}
+.displayquiz__top h1 {
+  font-weight: 200;
+  font-family: "Merriweather Sans";
+}
+.displayquiz__bottom {
+  margin-top: 20px;
+}
+
+.displayAnswers {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: 10px;
+  width: 500px;
+  padding: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.displayAnswers i {
+  padding: 10px;
+  margin-left: 10px;
+  color: #30BF91;
+  border: 0.5px solid #30BF91;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.displayAnswers i:hover {
+  background-color: #30BF91;
+  color: white;
+}
+
+.activeBtn {
+  background-color: #30BF91;
+  color: white !important;
 }/*# sourceMappingURL=main.css.map */

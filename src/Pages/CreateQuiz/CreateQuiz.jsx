@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import AnswerComponent from "../../Components/AnswerComponent";
 import QuizComponent from "../../Components/QuizComponent";
-import { addingNewQuiz } from "../../redux/Actions/actionCreators";
-import { useDispatch } from "react-redux";
+import { addingNewQuiz, removeAllCorrectAnswers, removeAllOptions } from "../../redux/Actions/actionCreators";
+import { useDispatch, useSelector } from "react-redux";
+import DisplayQuizComponent from "../../Components/DisplayQuizComponent";
 
 const CreateQuiz = () => {
   const initialQuizState = {
     id: null,
     question: "",
     type: "",
-    options: "",
+    options: [],
     correctAnswer: "",
   };
 
@@ -17,20 +18,31 @@ const CreateQuiz = () => {
 
   const [quizQuestion, setQuizQuestion] = useState("");
 
+
+
+  const quizState = useSelector(state => state.quizReducer);
+  const quizValues = useSelector(state => state.getQuizReducer.data);
+  const answerOptions = useSelector(state => state?.answerReducer);
+  const correctAnswerValues = useSelector(state => state.correctAnswerReducer);
+
   const dispatch = useDispatch();
 
+
   useEffect(() => {
-    if (quizQuestion) {
+    if (quizQuestion && answerOptions.length > 0) {
       dispatchActionHandler();
+      setQuizQuestion("");
+      dispatch(removeAllOptions())
+      dispatch(removeAllCorrectAnswers())
     }
   }, [quiz]);
 
   const dispatchActionHandler = () => {
-    dispatch(addingNewQuiz(quiz)).then((data) => console.log(data));
+    dispatch(addingNewQuiz(quiz));
   };
 
   const createQuizHandler = () => {
-    setQuiz({ ...quiz, question: quizQuestion });
+    setQuiz({ ...quiz, question: quizQuestion, type: quizState.type,options: answerOptions,correctAnswer: correctAnswerValues });
   };
 
   return (
@@ -46,11 +58,15 @@ const CreateQuiz = () => {
           />
           <h1 className="quiz__left_heading">Questions</h1>
 
+          {quizValues && quizValues.map(quiz=>(
+            <DisplayQuizComponent key={quiz.id} id={quiz.id} answers={quiz.correctAnswer} question={quiz.question} options={quiz.options} type={quiz.type} />
+          ))}
+
+
+
           <QuizComponent
-            setQuiz={setQuiz}
             setQuizQuestion={setQuizQuestion}
             quizQuestion={quizQuestion}
-            quiz={quiz}
           />
 
           <div className="quiz--btn">
