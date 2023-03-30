@@ -26,10 +26,10 @@ export const addNewOption = (answerOption) => {
   };
 };
 
-export const removeOption = (id) =>{
+export const removeOption = (answer) =>{
   return {
     type: constants.REMOVE_OPTION,
-    payload: id
+    payload: answer
   }
 } 
 

@@ -15,10 +15,9 @@ const DisplayOptions = ({ answers, id }) => {
   const btnHandler = () => {
     
     setBtn(!btn);
-    console.log(btn);
     btn
-      ? dispatch(removeCorrectAnswer(id))
-      : dispatch(setCorrectAnswer({ answers, id: id }));
+      ? dispatch(removeCorrectAnswer(answers))
+      : dispatch(setCorrectAnswer(answers));
   };
   const removeHandler = () => {
     dispatch(removeOption({ answers }));

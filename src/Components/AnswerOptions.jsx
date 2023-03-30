@@ -8,7 +8,8 @@ const AnswerOptions = () => {
 
  const dispatch = useDispatch();
   const submitHandler = e =>{
-      e.preventDefault();
+    e.preventDefault();
+    if(answerOption === '') return;
       dispatch(addNewOption(answerOption));
       setAnswerOption("");
   }
@@ -17,7 +18,7 @@ const AnswerOptions = () => {
   return (
     <div className="answer__container_input">
       <form onSubmit={submitHandler}>
-      <input value={answerOption} onChange={e=> setAnswerOption(e.target.value)} placeholder="add New Option" />
+      <input value={answerOption}  onChange={e=> setAnswerOption(e.target.value)} placeholder="add New Option" />
       </form>
     </div>
   );

@@ -12,9 +12,8 @@ export const correctAnswerReducer = (state=correctAnswer,action) =>{
         case constants.SET_CORRECT_ANSWER:
             return [...state,action.payload]
         case constants.REMOVE_CORRECT_ANSWER:
-            console.log(state.filter(correct=> correct.id != action.payload), action.payload)
-            return state.filter(correct =>{
-                return correct.id != action.payload
+            return state.filter(correctAns =>{
+                return correctAns != action.payload
             })
         
         case constants.REMOVE_ALL_CORRECT_ANSWERS:

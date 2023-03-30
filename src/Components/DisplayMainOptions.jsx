@@ -1,9 +1,10 @@
 import React from "react";
 
-const DisplayMainOptions = ({option,id}) => {
+const DisplayMainOptions = ({option,correctAnswerOption}) => {
+  console.log(correctAnswerOption)
   return (
     <>
-      <span>{option}</span>
+      <span className={correctAnswerOption.includes(option) ? "greenBorder":"redBorder"}>{option}</span>
     </>
   );
 };

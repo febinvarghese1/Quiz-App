@@ -1,5 +1,57 @@
 {
   "quizes": [
-    
+    {
+      "id": 1,
+      "question": "ques1",
+      "type": "dropdown",
+      "options": [
+        "opt1",
+        "opt2",
+        "opt3"
+      ],
+      "correctAnswer": [
+        "opt1",
+        "opt3"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "sample",
+      "type": "checkbox",
+      "options": [
+        "option1",
+        "option2",
+        "option3",
+        "option4"
+      ],
+      "correctAnswer": [
+        "option4",
+        "option2"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "another one",
+      "type": "dropdown",
+      "options": [
+        "op",
+        ""
+      ],
+      "correctAnswer": []
+    },
+    {
+      "id": 4,
+      "question": "ques",
+      "type": "dropdown",
+      "options": [
+        "answe",
+        "",
+        "op"
+      ],
+      "correctAnswer": [
+        "",
+        "answe"
+      ]
+    }
   ]
 }

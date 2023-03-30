@@ -18,7 +18,7 @@ function App() {
   return (
     <Router>
         <Layout>
-        <div className="App">
+        <div  className="App">
           <Routes>
             <Route path="/" element={<AdminHomePage />} />
             <Route path="/CreateQuiz" element={<CreateQuiz />} />
